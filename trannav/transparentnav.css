@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    font-family: "Open Sans", sans-serif;
+}
+
+#nav-checkbox, .nav-toggle{
+    display: none;
+}
+
+.hero{
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(255, 0, 0, 0.6)), url("flash-sale.avif") no-repeat bottom / cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1{
+    font-size: 60px;
+    color: #fff;
+    line-height: 1;
+}
+
+.hero h3{
+    font-size: 26px;
+    color: #fff;
+    font-weight: normal;
+    margin: 15px 0;
+}
+
+.hero a{
+    background: #cc0000;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    border-radius: 3px;
+    line-height: 1;
+    padding: 10px 18px;
+}
+
+.hero a:hover{
+    background: #c00101;
+}
+
+.content{
+    width: 80%;
+    margin: auto;
+    padding: 50px 0;
+}
+
+.content p{
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    transition: background-color 0.5s ease;
+}
+
+.logo h2{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.nav-menu li{
+    display: inline-block;
+}
+
+.nav-menu li a{
+    color: #fff;
+    text-decoration: none;
+    padding: 0 15px;
+    font-size: 1.5rem;
+}
+
+.nav-menu li a:hover{
+    color: #cc0000;
+}
+
+.active{
+    background: #cc0000;
+}
+
+.active a:hover{
+    color: #fff !important;
+}
+
+@media only screen and (max-width: 600px){
+    header{
+        display: block;
+    }
+    .logo{
+        margin-left: 15px;
+    }
+
+    .nav-toggle {
+        display: block;
+        position: absolute;
+        cursor: pointer;
+        margin: 0 1rem;
+        top: 25px;
+        right: 0;
+    }
+
+    .nav-toggle img{
+        width: 25px;
+    }
+
+    .close,
+    input[type="checkbox"]{
+        display: none;
+    }
+
+    #nav-checkbox:checked ~ .nav-menu{
+        background: #cc0000;
+        margin-top: 10px;
+        padding: 10px 0;
+        border-top: 1px solid #fff;
+    }
+
+    .nav-menu li{
+        display: none;
+        margin: 10px 0;
+    }
+
+    #nav-checkbox:checked ~ ul.nav-menu li{
+        display: block;
+    }
+
+    #nav-checkbox:checked ~ label.nav-toggle .open{
+        display: none;
+    }
+
+    #nav-checkbox:checked ~ label.nav-toggle .close{
+        display: block;
+    }
+
+    .hero h1{
+        font-size: 40px;
+    }
+
+    .hero h3{
+        font-size: 20px;
+    }
+
+}
